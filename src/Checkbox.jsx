@@ -20,8 +20,7 @@ export default function Checkbox({ nodes, selectedNodes, setSelectedNodes }) {
 
       //check if all the children are checked, then select the parent
       const verifyParentNodes = (node) => {
-        console.log('node : ', node);
-        if (!node.children) return newValue[node.id] || false;
+        if (node.children.length == 0) return newValue[node.id] || false;
         const allChildrenSelected = node.children?.every((child) =>
           verifyParentNodes(child)
         );
@@ -34,6 +33,7 @@ export default function Checkbox({ nodes, selectedNodes, setSelectedNodes }) {
     });
   };
 
+  //console.log('vegetablesData : ', vegetablesData);
   return (
     <>
       {nodes.map((node) => (
