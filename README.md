@@ -1,7 +1,5 @@
 # react-nested-checkboxes
 
-## How I built a nested checkbox React component
-
 ## Requirement
 
 1. If a checkbox is checked / unchecked, all of its descendants should become checked / unchecked.
